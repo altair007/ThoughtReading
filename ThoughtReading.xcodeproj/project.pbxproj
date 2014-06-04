@@ -19,6 +19,11 @@
 		C2A8BEC4193EB4820029A125 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8BEAC193EB4820029A125 /* UIKit.framework */; };
 		C2A8BECC193EB4820029A125 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2A8BECA193EB4820029A125 /* InfoPlist.strings */; };
 		C2A8BECE193EB4820029A125 /* ThoughtReadingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A8BECD193EB4820029A125 /* ThoughtReadingTests.m */; };
+		C2A8BED9193EB5100029A125 /* CFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A8BED8193EB5100029A125 /* CFMainViewController.m */; };
+		C2A8BF1C193EB6A50029A125 /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2A8BF18193EB6A50029A125 /* 01.jpg */; };
+		C2A8BF1D193EB6A50029A125 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2A8BF19193EB6A50029A125 /* 02.jpg */; };
+		C2A8BF1E193EB6A50029A125 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2A8BF1A193EB6A50029A125 /* 03.jpg */; };
+		C2A8BF1F193EB6A50029A125 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2A8BF1B193EB6A50029A125 /* 04.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,12 @@
 		C2A8BEC9193EB4820029A125 /* ThoughtReadingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ThoughtReadingTests-Info.plist"; sourceTree = "<group>"; };
 		C2A8BECB193EB4820029A125 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C2A8BECD193EB4820029A125 /* ThoughtReadingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThoughtReadingTests.m; sourceTree = "<group>"; };
+		C2A8BED7193EB5100029A125 /* CFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMainViewController.h; sourceTree = "<group>"; };
+		C2A8BED8193EB5100029A125 /* CFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMainViewController.m; sourceTree = "<group>"; };
+		C2A8BF18193EB6A50029A125 /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		C2A8BF19193EB6A50029A125 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		C2A8BF1A193EB6A50029A125 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		C2A8BF1B193EB6A50029A125 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +118,16 @@
 		C2A8BEAE193EB4820029A125 /* ThoughtReading */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8BF18193EB6A50029A125 /* 01.jpg */,
+				C2A8BF19193EB6A50029A125 /* 02.jpg */,
+				C2A8BF1A193EB6A50029A125 /* 03.jpg */,
+				C2A8BF1B193EB6A50029A125 /* 04.jpg */,
 				C2A8BEB7193EB4820029A125 /* CFAppDelegate.h */,
 				C2A8BEB8193EB4820029A125 /* CFAppDelegate.m */,
 				C2A8BEBA193EB4820029A125 /* Images.xcassets */,
 				C2A8BEAF193EB4820029A125 /* Supporting Files */,
+				C2A8BED7193EB5100029A125 /* CFMainViewController.h */,
+				C2A8BED8193EB5100029A125 /* CFMainViewController.m */,
 			);
 			path = ThoughtReading;
 			sourceTree = "<group>";
@@ -220,7 +237,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A8BF1E193EB6A50029A125 /* 03.jpg in Resources */,
+				C2A8BF1D193EB6A50029A125 /* 02.jpg in Resources */,
 				C2A8BEB3193EB4820029A125 /* InfoPlist.strings in Resources */,
+				C2A8BF1F193EB6A50029A125 /* 04.jpg in Resources */,
+				C2A8BF1C193EB6A50029A125 /* 01.jpg in Resources */,
 				C2A8BEBB193EB4820029A125 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +263,7 @@
 			files = (
 				C2A8BEB5193EB4820029A125 /* main.m in Sources */,
 				C2A8BEB9193EB4820029A125 /* CFAppDelegate.m in Sources */,
+				C2A8BED9193EB5100029A125 /* CFMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,9 +382,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ThoughtReading/ThoughtReading-Prefix.pch";
 				INFOPLIST_FILE = "ThoughtReading/ThoughtReading-Info.plist";
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -373,9 +397,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ThoughtReading/ThoughtReading-Prefix.pch";
 				INFOPLIST_FILE = "ThoughtReading/ThoughtReading-Info.plist";
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -440,6 +466,7 @@
 				C2A8BED3193EB4820029A125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2A8BED4193EB4820029A125 /* Build configuration list for PBXNativeTarget "ThoughtReadingTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +475,7 @@
 				C2A8BED6193EB4820029A125 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

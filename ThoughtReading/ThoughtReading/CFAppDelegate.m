@@ -7,7 +7,6 @@
 //
 
 #import "CFAppDelegate.h"
-#import "CFMainViewController.h"
 
 @implementation CFAppDelegate
 - (void)dealloc
@@ -20,14 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    
-    CFMainViewController * controller = [[CFMainViewController alloc] init];
-    self.window.rootViewController = controller;
-    [controller release];
-    
     [self.window makeKeyAndVisible];
     return YES;
 }
