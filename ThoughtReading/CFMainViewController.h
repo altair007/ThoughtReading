@@ -13,7 +13,8 @@
  */
 @interface CFMainViewController : UIViewController
 #pragma mark - 属性
-@property (retain, nonatomic) NSString * result; //!< 结果
+@property (retain, nonatomic) NSString * orginal; //!< 要显示的字符串
+@property (retain, nonatomic) NSString * result; //!< 当次要显示的字符
 
 #pragma mark - 工具方法
 /**
@@ -24,9 +25,18 @@
 - (NSString *) randomChineseCharacte;
 
 /**
- *  temp
+ *  随机返回一个目标字符串中的一个字符.
  *
  *  @return 随机汉字
  */
-- (NSString *)randomChineseCharacteTemp;
+- (NSString *)randomTargetCharacte;
+
+/**
+ *  根据一个汉字的utf-8码值,生成一个含有该汉字的string.
+ *
+ *  @param aUnichar 一个汉字的utf-8码
+ *
+ *  @return 含有该汉字的字符串.
+ */
+- (NSString *) chineseCharacteFromUnichar: (unichar) aUnichar;
 @end

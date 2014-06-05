@@ -17,6 +17,7 @@
 
 -(void)dealloc
 {
+    self.orginal = nil;
     self.result = nil;
     
     [super dealloc];
@@ -26,7 +27,14 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // !!!:仔细研究下这段代码.暂时先用着.
+        NSBundle * thisBundle = [NSBundle bundleForClass:[self class]];
+        NSString * path = [thisBundle pathForResource:@"myInfo" ofType:@"txt"];
+        if (nil == path) {
+            return  nil;
+        }
+        
+        self.orginal = [[[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil] autorelease];
     }
     return self;
 }
@@ -45,8 +53,10 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-    // !!!:应该添加处理内存警告的代码!
+    
+    if ([self isViewLoaded] && nil == self.view.window) {
+        self.view = nil;
+    }
 }
 
 #pragma mark - 事件响应
@@ -71,7 +81,8 @@
 #pragma mark - 实例方法
 - (UIView *)contentView
 {
-#pragma mark - 核心视图部分
+   self.result = self.randomTargetCharacte;
+    
     // 打印0~100个图标组:5个一行,共20列
     UIView * contentView = [[[UIView alloc] init] autorelease];
     contentView.backgroundColor = [UIColor whiteColor];
@@ -79,8 +90,6 @@
     contentView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64);
     
     CGRect rectOfLabel = CGRectMake(x, 0, (contentView.frame.size.width - 2 * x) / 5, contentView.frame.size.height / 20);
-    
-    self.result = self.randomChineseCharacteTemp;
     
     for (NSUInteger i = 0; i < 20; i++) {
         for (NSUInteger j = 0; j < 5; j++) {
@@ -107,10 +116,9 @@
 }
 
 #pragma mark - 工具方法
--(NSString *)randomChineseCharacte
+- (NSString *) chineseCharacteFromUnichar: (unichar) aUnichar
 {
-    NSInteger i =  arc4random()%(0x9fa5-0x4e00 + 1) + 0x4e00;
-    NSString * unicodeStr = [NSString stringWithFormat:@"\"\\U%lx\"", i];
+    NSString * unicodeStr = [NSString stringWithFormat:@"\"\\U%x\"", aUnichar];
     NSData *tempData = [unicodeStr dataUsingEncoding:NSUTF8StringEncoding];
     NSString* randomStr = [NSPropertyListSerialization propertyListFromData:tempData
                                                            mutabilityOption:NSPropertyListImmutable
@@ -119,44 +127,18 @@
     return randomStr;
 }
 
-// !!!:需要进一步封装
-- (NSString *)randomChineseCharacteTemp
+-(NSString *)randomChineseCharacte
 {
-    static int pwds[9] = {0x7231, 0x60c5, 0x662f, 0x4ece, 0x544a, 0x767d, 0x5f00, 0x59cb, 0x7684};
-    static int pwdUsed[9] = {0};
-    if (0 != pwdUsed[8]) {
-        for (int i = 0; i < 9; i ++) {
-            pwdUsed[i] = 0;
-        }
-    }
-    int randomNum = 0;
-    for (; ; ) {
-        randomNum = pwds[arc4random()%9];
-        BOOL isUsed = NO;
-        for (int i = 0; i < 9 && pwdUsed[i] != 0; i++) {
-            if (randomNum == pwdUsed[i]) {
-                isUsed = YES;
-                break;
-            }
-        }
-        if ( ! isUsed) {
-            for (int i = 0; i < 9; i++) {
-                if (0 == pwdUsed[i]) {
-                    pwdUsed[i] = randomNum;
-                    break;
-                }
-            }
-            break;
-        }
-    }
-    
-    NSString * unicodeStr = [NSString stringWithFormat:@"\"\\U%x\"", randomNum];
-    NSData *tempData = [unicodeStr dataUsingEncoding:NSUTF8StringEncoding];
-    NSString* randomStr = [NSPropertyListSerialization propertyListFromData:tempData
-                                                           mutabilityOption:NSPropertyListImmutable
-                                                                     format:NULL
-                                                           errorDescription:NULL];
-    return randomStr;
+    NSInteger randomNum =  arc4random()%(0x9fa5-0x4e00 + 1) + 0x4e00;
+    return  [self chineseCharacteFromUnichar:randomNum];
+}
+
+- (NSString *)randomTargetCharacte
+{
+    NSString * result;
+    result = [self.orginal substringWithRange:NSMakeRange(arc4random()%self.orginal.length, 1)];
+    return result;
+
 }
 #pragma mark - 重写方法
 - (void)viewWillAppear:(BOOL)animated

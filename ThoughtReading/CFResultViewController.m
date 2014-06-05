@@ -35,21 +35,14 @@
     
     self.navigationItem.title = @"结果";
     
-    // ???: 必须重设左侧按钮?不可以借助默认的,单单更改一个label的text值?
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"再试一次" style:UIBarButtonItemStylePlain target:self action:@selector(didClickPlayAgainButtonItemAction:)];
-    
-    // FIXME: 应该变大点!
-    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
-    label.text = self.result;
-    label.center = self.view.center;
-    [self.view addSubview: label];
-    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if ([self isViewLoaded] && nil == self.view.window) {
+        self.view = nil;
+    }
 }
 
 #pragma mark - 事件响应
@@ -59,5 +52,20 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - 重写方法
+-(void)viewWillAppear:(BOOL)animated
+{
+    // ???: 为什么无法操作系统自带的"返回按钮"?只需要改变它的title,就可以满足需要了!
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"再试一次" style:UIBarButtonItemStylePlain target:self action:@selector(didClickPlayAgainButtonItemAction:)];
 
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    // FIXME: 应该变大点!
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
+    label.text = self.result;
+    label.center = self.view.center;
+    [self.view addSubview: label];
+}
 @end
