@@ -13,9 +13,20 @@
  */
 @interface CFMainViewController : UIViewController
 #pragma mark - 属性
-@property (assign, nonatomic, readonly) UIView * contentView; //!< 内容视图.
-@property (retain, nonatomic) UIView * navBarView; //!< 导航视图.
-@property (retain, nonatomic) UIView * resultView; //!< 结果视图
 @property (retain, nonatomic) NSString * result; //!< 结果
 
+#pragma mark - 工具方法
+/**
+ *  随机产生一个汉字
+ *
+ *  @return 返回一个随机产生的汉字
+ */
+- (NSString *) randomChineseCharacte;
+
+/**
+ *  temp
+ *
+ *  @return 随机汉字
+ */
+- (NSString *)randomChineseCharacteTemp;
 @end

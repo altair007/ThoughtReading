@@ -24,8 +24,12 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
+    // 导航控制器
     CFMainViewController * controller = [[CFMainViewController alloc] init];
-    self.window.rootViewController = controller;
+    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:controller];
+    self.window.rootViewController = navController;
+    
+    [navController release];
     [controller release];
     
     [self.window makeKeyAndVisible];

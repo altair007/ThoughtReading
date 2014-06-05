@@ -24,6 +24,7 @@
 		C2A8BF1D193EB6A50029A125 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2A8BF19193EB6A50029A125 /* 02.jpg */; };
 		C2A8BF1E193EB6A50029A125 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2A8BF1A193EB6A50029A125 /* 03.jpg */; };
 		C2A8BF1F193EB6A50029A125 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2A8BF1B193EB6A50029A125 /* 04.jpg */; };
+		C2F0981819400FC8009CF804 /* CFResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F0981719400FC8009CF804 /* CFResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		C2A8BF19193EB6A50029A125 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
 		C2A8BF1A193EB6A50029A125 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
 		C2A8BF1B193EB6A50029A125 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		C2F0981619400FC8009CF804 /* CFResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFResultViewController.h; sourceTree = "<group>"; };
+		C2F0981719400FC8009CF804 /* CFResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				C2A8BEB1193EB4820029A125 /* InfoPlist.strings */,
 				C2A8BEB4193EB4820029A125 /* main.m */,
 				C2A8BEB6193EB4820029A125 /* ThoughtReading-Prefix.pch */,
+				C2F0981619400FC8009CF804 /* CFResultViewController.h */,
+				C2F0981719400FC8009CF804 /* CFResultViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			files = (
 				C2A8BEB5193EB4820029A125 /* main.m in Sources */,
 				C2A8BEB9193EB4820029A125 /* CFAppDelegate.m in Sources */,
+				C2F0981819400FC8009CF804 /* CFResultViewController.m in Sources */,
 				C2A8BED9193EB5100029A125 /* CFMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
