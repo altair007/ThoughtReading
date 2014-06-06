@@ -21,7 +21,7 @@
 		C2A8BECC193EB4820029A125 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2A8BECA193EB4820029A125 /* InfoPlist.strings */; };
 		C2A8BECE193EB4820029A125 /* ThoughtReadingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A8BECD193EB4820029A125 /* ThoughtReadingTests.m */; };
 		C2A8BED9193EB5100029A125 /* CFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A8BED8193EB5100029A125 /* CFMainViewController.m */; };
-		C2E2E6AE194155F6001F3B06 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C2E2E6AD194155F6001F3B06 /* readme.md */; };
+		C2E2E6B0194156A2001F3B06 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = C2E2E6AF194156A2001F3B06 /* readme.md */; };
 		C2F0981819400FC8009CF804 /* CFResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F0981719400FC8009CF804 /* CFResultViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +55,7 @@
 		C2A8BECD193EB4820029A125 /* ThoughtReadingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThoughtReadingTests.m; sourceTree = "<group>"; };
 		C2A8BED7193EB5100029A125 /* CFMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMainViewController.h; sourceTree = "<group>"; };
 		C2A8BED8193EB5100029A125 /* CFMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMainViewController.m; sourceTree = "<group>"; };
-		C2E2E6AD194155F6001F3B06 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		C2E2E6AF194156A2001F3B06 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = SOURCE_ROOT; };
 		C2F0981619400FC8009CF804 /* CFResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFResultViewController.h; sourceTree = "<group>"; };
 		C2F0981719400FC8009CF804 /* CFResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,7 +125,7 @@
 				C2A8BED8193EB5100029A125 /* CFMainViewController.m */,
 				C2F0981619400FC8009CF804 /* CFResultViewController.h */,
 				C2F0981719400FC8009CF804 /* CFResultViewController.m */,
-				C2E2E6AD194155F6001F3B06 /* readme.md */,
+				C2E2E6AF194156A2001F3B06 /* readme.md */,
 			);
 			path = ThoughtReading;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 			files = (
 				C2A8BEB3193EB4820029A125 /* InfoPlist.strings in Resources */,
 				C21AF813194075F900E64094 /* heart.txt in Resources */,
-				C2E2E6AE194155F6001F3B06 /* readme.md in Resources */,
+				C2E2E6B0194156A2001F3B06 /* readme.md in Resources */,
 				C2A8BEBB193EB4820029A125 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
