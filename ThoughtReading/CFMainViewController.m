@@ -27,8 +27,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSBundle * thisBundle = [NSBundle bundleForClass:[self class]];
-        NSString * path = [thisBundle pathForResource:@"heart" ofType:@"txt"];
+        NSString * path;
+        path = [NSBundle pathForResource:@"heart" ofType: @"txt" inDirectory:[NSBundle mainBundle].bundlePath];
+        
         if (nil == path) {
             return  nil;
         }
