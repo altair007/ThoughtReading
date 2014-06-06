@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21AF813194075F900E64094 /* heart.txt in Resources */ = {isa = PBXBuildFile; fileRef = C21AF812194075F900E64094 /* heart.txt */; };
 		C2A8BEA9193EB4820029A125 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8BEA8193EB4820029A125 /* Foundation.framework */; };
 		C2A8BEAB193EB4820029A125 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8BEAA193EB4820029A125 /* CoreGraphics.framework */; };
 		C2A8BEAD193EB4820029A125 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A8BEAC193EB4820029A125 /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C21AF812194075F900E64094 /* heart.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = heart.txt; sourceTree = "<group>"; };
 		C2A8BEA5193EB4820029A125 /* ThoughtReading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtReading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A8BEA8193EB4820029A125 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C2A8BEAA193EB4820029A125 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,7 @@
 		C2A8BEAF193EB4820029A125 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C21AF812194075F900E64094 /* heart.txt */,
 				C2A8BEB0193EB4820029A125 /* ThoughtReading-Info.plist */,
 				C2A8BEB1193EB4820029A125 /* InfoPlist.strings */,
 				C2A8BEB4193EB4820029A125 /* main.m */,
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A8BEB3193EB4820029A125 /* InfoPlist.strings in Resources */,
+				C21AF813194075F900E64094 /* heart.txt in Resources */,
 				C2A8BEBB193EB4820029A125 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

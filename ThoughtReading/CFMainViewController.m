@@ -27,9 +27,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // !!!:仔细研究下这段代码.暂时先用着.
         NSBundle * thisBundle = [NSBundle bundleForClass:[self class]];
-        NSString * path = [thisBundle pathForResource:@"myInfo" ofType:@"txt"];
+        NSString * path = [thisBundle pathForResource:@"heart" ofType:@"txt"];
         if (nil == path) {
             return  nil;
         }
@@ -62,7 +61,6 @@
 #pragma mark - 事件响应
 - (void) didClickRuleBarButtonItemAction: (id) sender
 {
-    // FIXME:文字居中显示,不美观!
     NSString * rule = @"  吉普赛人祖传的神奇读心术，它能够测算出人的内心感应！\n  游戏玩法：任意选择一个两位数（具体说，从10~99之间任意选择一个数）。把这个数的十位与个位相加，再用任意选择的数减去这个数。例如，你选择的数是23，然后2 + 3 = 5，然后23 - 5 = 18。在图表中找到与最后得出的数所对应的汉字，并把这个汉字牢记心中，然后点击“开始读心术”。然后你会发现，显示出来的汉字就是你刚刚心里记下的那个汉字。";
     UIAlertView * ruleView = [[UIAlertView alloc] initWithTitle:@"读心术玩法" message:rule delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
     [ruleView show];
